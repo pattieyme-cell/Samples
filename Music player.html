@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick's Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --player-bg: #ffffff;
+            --accent: #6c5ce7;
+            --text-main: #2d3436;
+            --text-dim: #b2bec3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* The Player Card */
+        .player-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            width: 320px;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        /* Album Art */
+        .album-art {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #dfe6e9, #b2bec3);
+            margin: 0 auto 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .song-info h2 {
+            margin: 10px 0 5px;
+            font-size: 1.4rem;
+            color: var(--text-main);
+        }
+
+        .song-info p {
+            margin: 0 0 25px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: #eee;
+            height: 6px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .progress-fill {
+            background: var(--accent);
+            height: 100%;
+            width: 45%; /* Static representation of progress */
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: -4px;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+        }
+
+        .time {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .btn:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .play-btn {
+            background: var(--accent);
+            color: white !important;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 15px rgba(108, 92, 231, 0.3);
+        }
+
+        .play-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player-card">
+        <div class="album-art">🎵</div>
+        
+        <div class="song-info">
+            <h2>Lo-fi Dreams</h2>
+            <p>PATRICK THOMAS</p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="time">
+            <span>1:45</span>
+            <span>3:50</span>
+        </div>
+
+        <div class="controls">
+            <button class="btn">⏮</button>
+            <button class="btn play-btn">▶</button>
+            <button class="btn">⏭</button>
+        </div>
+    </div>
+
+</body>
+</html>
