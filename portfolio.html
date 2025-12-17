@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Thomas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Handlee&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #6c5ce7; /* A warmer, friendlier purple-blue */
+            --bg: #fdfbf7;    /* Warmer "paper" like background */
+            --card-bg: #ffffff;
+        }
+
+        body { 
+            margin: 0;
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--primary);
+            line-height: 1.7;
+        }
+
+        /* Nav with a personal signature feel */
+        nav {
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { 
+            font-family: 'Handlee', cursive; 
+            font-size: 1.5rem; 
+            color: var(--accent);
+        }
+
+        /* Hero: Conversational & Spaced */
+        header {
+            padding: 80px 10% 40px 10%;
+            max-width: 800px;
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; }
+        
+        .highlight {
+            color: var(--accent);
+            border-bottom: 3px solid #00000033;
+        }
+
+        .intro-text { font-size: 1.25rem; color: #4b4b4b; max-width: 600px; }
+
+        /* Project Cards with "Physical" feel */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto 100px auto; 
+            padding: 0 20px; 
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px; /* Softer corners */
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02) rotate(1deg); /* Slight "hand-placed" tilt */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .project-card h3 { 
+            margin-top: 0; 
+            font-size: 1.5rem;
+            color: var(--primary); 
+        }
+
+        .project-card p { color: #636e72; font-size: 1rem; }
+
+        .arrow { color: var(--accent); font-weight: bold; }
+
+        footer { 
+            text-align: center; 
+            padding: 60px; 
+            border-top: 1px solid #eee;
+            background: white;
+            font-size: 0.9rem; 
+        }
+
+        /* Small decorative element */
+        .blob {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: #6c5ce708;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob"></div>
+
+    <nav>
+        <div class="logo">pt.</div>
+        <div>
+            <a href="mailto:patrick@example.com" style="text-decoration: none; color: var(--accent); font-weight: 600;">Say hello!</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Hi, I'm <span class="highlight">Patrick</span>. I build things for the web.</h1>
+        <p class="intro-text">
+            I'm currently a student diving deep into the world of HTML and CSS. 
+            I love turning messy ideas into clean, friendly interfaces.
+        </p>
+    </header>
+
+    <div class="container">
+        <h2 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #b2bec3;">Work I've done</h2>
+        <div class="project-grid">
+            
+            <a href="#" class="project-card">
+                <h3>The Beginning</h3>
+                <p>This was my very first webpage. It's simple, but it's where I learned how the internet actually works.</p>
+                <span class="arrow">Check it out →</span>
+            </a>
+
+            <a href="#" class="project-card">
+                <h3>Hobby Tracker</h3>
+                <p>A little site I made to organize my interests. It taught me how to move things around with Flexbox.</p>
+                <span class="arrow">Take a look →</span>
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Hand-coded with by Patrick Thomas</p>
+    </footer>
+
+</body>
+</html>
